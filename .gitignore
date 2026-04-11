@@ -1,0 +1,12 @@
+raw/
+processed/
+parquet/
+*.parquet
+*.dbc
+*.csv
+*.zip
+
+.DS_Store
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
