@@ -6,16 +6,16 @@
 
 ---
 
-## 👥 Integrantes e Responsabilidades
+## Integrantes e Responsabilidades
 
-| Beatriz Brito do Rosário | **Extract** |
-| Davi de Souza Lopes | **Transform** |
-| Lucas de Siqueira Cavalcanti | **Load** |
-| Lucas Montalvão Ramires | **Classificação** |
+- Beatriz Brito do Rosário - **Extract**
+- Davi de Souza Lopes - **Transform**
+- Lucas de Siqueira Cavalcanti - **Load**
+- Lucas Montalvão Ramires - **Classificação**
 
 ---
 
-## 🗂️ Estrutura de Pastas (Google Drive)
+## Estrutura de Pastas (Google Drive)
 
 ```
 Topicos_BD/
@@ -28,7 +28,7 @@ Topicos_BD/
 └── notebooks/                       ← notebooks .ipynb
 ```
 
-> **⚠️ IMPORTANTE — Acesso compartilhado:**  
+> **IMPORTANTE — Acesso compartilhado:**  
 > A pasta `Topicos_BD` está no Drive da Beatriz. Para executar qualquer etapa do pipeline sem precisar baixar os dados novamente, **solicite acesso de edição a ela e adicione a pasta como atalho no seu próprio Drive.** Cada notebook do pipeline (Transform, Load, Classificação) já aponta para esse mesmo caminho.
 
 Cada etapa lê da pasta anterior e escreve na sua. 
@@ -115,12 +115,6 @@ df_ibge = pd.read_parquet('raw/ibge/ibge_municipios.parquet')
 
 
 ---
-
-## ⚙️ Dependências
-
-```bash
-pip install pysus pyspark pandas pyarrow pyftpdlib matplotlib
-```
 
 Todas as etapas rodam no **Google Colab** com acesso ao Google Drive montado.
 
