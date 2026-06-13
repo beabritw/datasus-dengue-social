@@ -1,7 +1,6 @@
 # Projeto Data Major — Tópicos de Banco de Dados · IESB 2026
 
 > **Análise de padrões de hospitalização em casos de dengue com base no perfil clínico e social do paciente**
-> + Análise via Clusterização K-means
 > + Dados via SINAN - DataSus
 > **Docente:** Rodrigo Gonçalves
 
@@ -13,23 +12,6 @@
 - Davi de Souza Lopes - **Transform**
 - Lucas de Siqueira Cavalcanti - **Load**
 - Lucas Montalvão Ramires - **Classificação**
-
----
-
-
-## Arquitetura do Pipeline
- 
-O pipeline segue a arquitetura **Medallion (Bronze → Silver → Gold)**.
- 
-```
-┌─────────────┐     ┌─────────────┐     ┌─────────────┐     ┌─────────────┐
-│   EXTRACT   │────▶│  TRANSFORM  │────▶│    LOAD     │────▶│   MINING    │
-│             │     │             │     │             │     │             │
-│  PySUS FTP  │     │   PySpark   │     │Gold: Parquet│     │   K-means   │
-│  .DBC→.parq │     │  9.6M→6.9M  │     │RDBMS:SQLite │     │  Spark ML   │
-└─────────────┘     └─────────────┘     └─────────────┘     └─────────────┘
-   Bronze Layer         Silver Layer         Gold Layer        Analytics
-```
 
 ---
 
